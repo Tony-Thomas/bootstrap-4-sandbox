@@ -80,9 +80,9 @@
 
       <div class="container">
         <!--########################START HERE#########################-->
-        
+
         <!-- TABLE -->
-        <table>
+        <table class="table">
             <thead>
                 <tr>
                     <th>#</th>
@@ -114,7 +114,7 @@
         </table>
 
         <!-- INVERSE TABLE -->
-        <table>
+        <table class="table table-inverse">
             <thead>
                 <tr>
                     <th>#</th>
@@ -147,8 +147,8 @@
 
         <!-- TABLE HEAD INVERSE -->
         <!-- TABLE -->
-        <table>
-            <thead>
+        <table class="table">
+            <thead class="thead-inverse">
                 <tr>
                     <th>#</th>
                     <th>First Name</th>
@@ -179,8 +179,8 @@
         </table>
 
         <!-- STRIPED TABLE -->
-        <table>
-            <thead>
+        <table class="table table-striped">
+            <thead class="bg-danger text-white">
                 <tr>
                     <th>#</th>
                     <th>First Name</th>
@@ -211,7 +211,7 @@
         </table>
 
         <!-- BORDERED TABLE -->
-        <table>
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>#</th>
@@ -244,7 +244,7 @@
 
         <!-- HOVERABLE -->
         <!-- TABLE -->
-        <table>
+        <table class="table table-hover">
             <thead>
                 <tr>
                     <th>#</th>
@@ -266,7 +266,7 @@
                     <td>Johnson</td>
                     <td>will@yahoo.com</td>
                 </tr>
-                <tr>
+                <tr class="table-warning">
                     <th scope="row">3</th>
                     <td>Shannon</td>
                     <td>Williams</td>
@@ -276,7 +276,7 @@
         </table>
 
         <!-- SMALL TABLE -->
-        <table>
+        <table class="table table-sm table-bordered table-hover table-striped">
             <thead>
                 <tr>
                     <th>#</th>
@@ -311,12 +311,32 @@
 
         <!-- PAGINATION -->
         <nav>
-            <ul>
-                <li><a href="#">Previous</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">Next</a></li>
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+        <br>
+        <nav>
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+        <br>
+        <nav>
+            <ul class="pagination justify-content-end">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
             </ul>
         </nav>
 
