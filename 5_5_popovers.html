@@ -81,10 +81,80 @@
   <div class="container">
     <!--########################START HERE#########################-->
 
-    <!-- POPOVER -->
+    <br><br>
 
+    <!-- POPOVER -->
+    <button class="btn btn-lg btn-danger"
+            data-toggle="popover"
+            data-placement="top"
+            title="Popover Top Title"
+            data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+        Toggle Top Popover
+    </button>
+
+    <br><br>
+
+    <button class="btn btn-lg btn-success"
+            data-toggle="popover"
+            data-placement="right"
+            title="Popover Right Title"
+            data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+        Toggle Right Popover
+    </button>
+
+    <br><br>
+
+    <button class="btn btn-lg btn-warning"
+            data-toggle="popover"
+            data-placement="left"
+            title="Popover Left Title"
+            data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+        Toggle Left Popover
+    </button>
+
+    <br><br>
+
+    <button class="btn btn-lg btn-primary"
+            data-toggle="popover"
+            data-placement="bottom"
+            title="Popover Bottom Title"
+            data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+        Toggle Bottom Popover
+    </button>
+
+    <br><br>
 
     <!-- DISMISSIBLE POPOVER -->
+    <button class="btn btn-lg btn-secondary"
+            id="myPopover"
+            data-toggle="popover"
+            data-placement="right"
+            title="Dismissible Popover"
+            data-trigger="focus"
+            data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+        Dismissible Popover
+    </button>
+
+    <br><br>
+
+    <!-- CONTROL WITH JS -->
+
+    <button class="btn btn-info"
+            onclick="showPopover()">
+        Show Popover
+    </button>
+    <button class="btn btn-info"
+            onclick="hidePopover()">
+        Hide Popover
+    </button>
+    <button class="btn btn-info"
+            onclick="togglePopover()">
+        Toggle Popover
+    </button>
+
+
+
+
   </div>
 
   <div style="margin-top:500px;"></div>
@@ -94,5 +164,38 @@
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script>
+    $('[data-toggle="popover"]').popover();
+
+    function showPopover(){
+        $('#myPopover').popover('show');
+    }
+
+    function hidePopover(){
+        $('#myPopover').popover('hide');
+    }
+
+    function togglePopover(){
+        $('#myPopover').popover('toggle');
+    }
+
+    //POPOVER EVENTS
+
+    $('#myPopover').on('show.bs.popover', function(){
+        console.log('Show Popover')
+    });
+
+    $('#myPopover').on('shown.bs.popover', function(){
+        console.log('Popover Shown')
+    });
+
+    $('#myPopover').on('hide.bs.popover', function(){
+        console.log('Hide Popover')
+    });
+
+    $('#myPopover').on('hidden.bs.popover', function(){
+        console.log('Popover Hidden')
+    });
+  </script>
 </body>
 </html>
