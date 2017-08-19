@@ -81,10 +81,72 @@
   <div class="container">
     <!--########################START HERE#########################-->
 
+    <br><br>
     <!-- TOOLTIPS -->
+    <button class="btn btn-primary"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Tooltip On Top">
+        Tooltip On Top
+    </button>
 
+    <br><br>
+
+    <button class="btn btn-warning"
+            data-toggle="tooltip"
+            data-placement="right"
+            title="Tooltip On Right">
+        Tooltip On Right
+    </button>
+
+    <br><br>
+
+    <button class="btn btn-danger"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Tooltip On Bottom">
+        Tooltip On Bottom
+    </button>
+
+    <br><br>
+
+    <button class="btn btn-info"
+            data-toggle="tooltip"
+            data-placement="left"
+            title="Tooltip On Left">
+        Tooltip On Left
+    </button>
+
+    <br><br>
 
     <!-- TOOLTIPS WITH HTML -->
+    <button id="hello" class="btn btn-primary"
+            data-toggle="tooltip"
+            data-placement="right"
+            data-html="true"
+            title="<h3>Hello World</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur.</p>">
+        Tooltip With HTML
+    </button>
+
+    <br><br>
+
+    <!-- TRIGGER WITH JS -->
+    <button class="btn btn-secondary" onclick="showToolTip()">
+        Show Tooltip
+    </button>
+
+    <br><br>
+
+    <button class="btn btn-secondary" onclick="hideToolTip()">
+        Hide Tooltip
+    </button>
+
+    <br><br>
+
+    <button class="btn btn-secondary" onclick="toggleToolTip()">
+        Toggle Tooltip
+    </button>
   </div>
 
   <div style="margin-top:500px;"></div>
@@ -94,5 +156,40 @@
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script>
+      // INITIALIZE TOOLTIPS
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // ONCLICK TOOLTIP FUNCTIONS
+      function showToolTip(){
+          $('#hello').tooltip('show');
+      }
+
+      function hideToolTip(){
+          $('#hello').tooltip('hide');
+      }
+
+      function toggleToolTip(){
+          $('#hello').tooltip('toggle');
+      }
+
+      // TOOLTIP EVENTS
+      $('#hello').on('show.bs.tooltip', function(){
+          console.log('Tooltip Show');
+      });
+
+      $('#hello').on('shown.bs.tooltip', function(){
+          console.log('Tooltip Shown');
+      });
+
+      $('#hello').on('hide.bs.tooltip', function(){
+          console.log('Tooltip Hide');
+      });
+
+      $('#hello').on('hidden.bs.tooltip', function(){
+          console.log('Tooltip Hidden');
+      });
+
+  </script>
 </body>
 </html>
